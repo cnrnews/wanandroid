@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+
+    <dimen name="toolbarTitle">12sp</dimen>
+    <!--文章列表样式-->
+    <dimen name="author">8sp</dimen>
+    <dimen name="date">8sp</dimen>
+    <dimen name="type">8sp</dimen>
+    <dimen name="title">12sp</dimen>
+</resources>

@@ -1,0 +1,3 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!--style下沉到了common模块-->
+</resources>

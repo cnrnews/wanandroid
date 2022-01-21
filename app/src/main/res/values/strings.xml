@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">玩安卓</string>
+    <string name="str_home">首页</string>
+    <string name="str_course">问答</string>
+    <string name="str_study">体系</string>
+    <string name="str_mine">我的</string>
+</resources>

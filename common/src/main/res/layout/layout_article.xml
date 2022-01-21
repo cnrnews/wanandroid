@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="author"
+            type="String" />
+        <variable
+            name="niceDate"
+            type="String" />
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="superChapterName"
+            type="String" />
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cc_layout"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{author`}"
+                android:textSize="@dimen/author"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="张三" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{niceDate}"
+                android:textSize="@dimen/date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="2019-12-12" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:layout_marginTop="10dp"
+                android:text="@{title}"
+                android:textColor="@color/button_material_dark"
+                android:textSize="@dimen/title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_date"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Kotlin 版本鱿鱼游戏，你能闯几关？" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_type"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{superChapterName}"
+                android:textSize="@dimen/type"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                tools:text="￥1999"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

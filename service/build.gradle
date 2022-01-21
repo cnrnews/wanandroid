@@ -1,0 +1,19 @@
+apply plugin:'com.android.library'
+apply from: '../dependencies.gradle'
+
+android {
+    //others from dependencies.gradle
+    defaultConfig {
+
+    }
+    kapt.includeCompileClasspath = false
+}
+
+dependencies {
+    //others from dependencies.gradle
+    api project(path: ':common')
+
+    //doki 调试辅助工具
+    debugImplementation 'com.didichuxing.doraemonkit:dokitx:3.3.5'
+    releaseImplementation 'com.didichuxing.doraemonkit:dokitx-no-op:3.3.5'
+}

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.cniao5.mine.MineViewModel" />
+        <import type="android.view.View"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:id="@+id/v_bg_header_mine"
+            android:background="@color/colorPrimary"
+            >
+            <!--反引号是默认值,里面只能写英文-->
+            <!--??就是可以为空-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_user_icon_mine"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                app:shapeAppearanceOverlay="@style/circleImageStyle"
+                android:src="@drawable/icon_default_header"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_user_name_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:text="登录"
+                app:layout_constraintTop_toBottomOf="@+id/iv_user_icon_mine"
+                tools:text="菜鸟窝"
+                />
+        </FrameLayout>
+<!--        android:text="@{vm.liveInfoRsp.value.??@string/str_login_or_register}"-->
+        <com.cniao5.mine.widget.ItemSettingsView
+            android:id="@+id/isv_score"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            app:icon="@drawable/ic_score"
+            app:layout_constraintTop_toBottomOf="@id/v_bg_header_mine"
+            app:title="我的积分"
+            />
+
+        <com.cniao5.mine.widget.ItemSettingsView
+            android:id="@+id/isv_share"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/colorWhite"
+            app:icon="@drawable/ic_share"
+            app:layout_constraintTop_toBottomOf="@id/isv_score"
+            app:title="我的分享"
+            />
+
+        <com.cniao5.mine.widget.ItemSettingsView
+            android:id="@+id/isv_save"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/colorWhite"
+            app:icon="@drawable/ic_like"
+            app:layout_constraintTop_toBottomOf="@id/isv_share"
+            app:title="我的收藏"
+            />
+
+        <com.cniao5.mine.widget.ItemSettingsView
+            android:id="@+id/isv_liked"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/colorWhite"
+            app:icon="@drawable/ic_book"
+            app:layout_constraintTop_toBottomOf="@id/isv_save"
+            app:title="我的书签"
+            />
+
+        <com.cniao5.mine.widget.ItemSettingsView
+            android:id="@+id/isv_history"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/colorWhite"
+            app:icon="@drawable/ic_history"
+            app:layout_constraintTop_toBottomOf="@id/isv_liked"
+            app:title="阅读历史"
+            />
+
+        <com.cniao5.mine.widget.ItemSettingsView
+            android:id="@+id/isv_project"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/colorWhite"
+            app:icon="@drawable/ic_project"
+            app:layout_constraintTop_toBottomOf="@id/isv_history"
+            app:title="开源项目"
+            />
+
+        <com.cniao5.mine.widget.ItemSettingsView
+            android:id="@+id/isv_sys"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/colorWhite"
+            app:icon="@drawable/ic_sys"
+            app:layout_constraintTop_toBottomOf="@id/isv_project"
+            app:title="系统设置"
+            />
+    </LinearLayout>
+</layout>

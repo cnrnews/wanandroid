@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cniao5.common">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
+        <!--hardwareAccelerated打开硬件加速-->
+        <!--configChanges防止activity 在部分状态改变时重新回调各个生命周期，导致播放异常或失败-->
+        <!--singleTop若实例存在就不会再新建 = 只启动一个-->
+        <activity android:name=".webview.WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"/>
+        <!-- 今日头条适配方案默认以宽为基准 -->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
+    </application>
+</manifest>
